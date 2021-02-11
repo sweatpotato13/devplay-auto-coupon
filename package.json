@@ -1,0 +1,51 @@
+{
+  "name": "nodejs-typescript-boilerplate",
+  "version": "0.0.0",
+  "description": "nodejs-typescript-boilerplate",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/!(*.queries).ts": [
+      "yarn prettier",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^3.9.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-jest": "^24.1.3",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "lint-staged": "^10.5.4",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.0",
+    "tsutils": "^3.20.0",
+    "typescript": "^4.1.3",
+    "ts-node-dev": "^1.1.1"
+  },
+  "scripts": {
+    "dev": "yarn prettier && ts-node-dev src/main.ts --trace-sync-io",
+    "test": "jest",
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
+    "prettier": "prettier --write --config .prettierrc ./src///*.ts && prettier --write --config .prettierrc ./test///*.ts",
+    "build": "tsc",
+    "prebuild": "rimraf ./dist"
+  },
+  "author": "CuteWisp <sweatpotato13@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "volta": {
+    "node": "12.18.3",
+    "npm": "6.14.5"
+  }
+}
