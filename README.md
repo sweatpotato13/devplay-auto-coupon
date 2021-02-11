@@ -12,7 +12,7 @@ Module that apply devPlay coupon through CLI
 ## 💾 Installation
 ```sh
 # Local install
-git clone https://github.com/sweatpotato13/PSrating-discord-bot.git
+git clone https://github.com/sweatpotato13/devPlayAutoCoupon.git
 yarn build
 yarn test
 devplay [arg...]
