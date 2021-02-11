@@ -18,6 +18,12 @@ yarn test
 devplay [arg...]
 ```
 
+```sh
+# from NPM
+yarn global add devplayautocouponyarn
+devplay [arg...]
+```
+
 ## 💾 Usage
 ```sh
 devplay [devPlayId] [coupon] # Apply [coupon] in [devPlayId]

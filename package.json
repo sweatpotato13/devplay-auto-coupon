@@ -1,8 +1,9 @@
 {
-  "name": "devPlayAutoCoupon",
-  "version": "1.0.0",
+  "name": "devplayautocoupon",
+  "version": "1.0.1",
   "description": "devPlayAutoCoupon",
   "main": "./src/main.ts",
+  "homepage" : "https://github.com/sweatpotato13/devPlayAutoCoupon",
   "bin": {
     "devplay": "./dist/src/main.js"
   },
