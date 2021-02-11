@@ -20,7 +20,7 @@ devplay [arg...]
 
 ```sh
 # from NPM
-yarn global add devplayautocouponyarn
+yarn global add devplayautocoupon
 devplay [arg...]
 ```
 
