@@ -10,7 +10,7 @@ console.log(
     chalk.red(figlet.textSync("devPlay", { horizontalLayout: "full" }))
 );
 
-program.version("1.0.1").parse(process.argv);
+program.version("1.1.0").parse(process.argv);
 
 console.log("Usage:");
 console.log("devPlay [devPlayID] [coupon]: Apply coupon in devPlayID");
