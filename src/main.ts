@@ -13,9 +13,11 @@ console.log(
 program.version("1.1.0").parse(process.argv);
 
 console.log("Usage:");
-console.log("devPlay [devPlayID] [coupon]: Apply coupon in devPlayID");
+console.log(
+    "devPlay [gameCode] [devPlayID] [coupon]: Apply coupon in devPlayID"
+);
 console.log("devPlay [jsonPath]: Apply coupon with json format");
-if (process.argv.length == 3 || process.argv.length == 4) {
+if (process.argv.length == 3 || process.argv.length == 5) {
     clear();
 }
 apply(process.argv);
