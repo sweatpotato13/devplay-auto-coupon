@@ -1,13 +1,25 @@
 {
-    "devPlayId": "myDevPlayId",
-    "coupons": [
-        "WELCOMETOKINGDOM",
-        "KINGDOMWELOVEYOU",
-        "KINGDOMSUNBA0128",
-        "KINGDOMYANGDDING",
-        "KINGDOMSWAMP0130",
-        "TK2PO5GA87DBJALQ",
-        "KINGDOMLILKA2021",
-        "KINGDOMOKING5927"
+    "data": [
+        {
+            "gameCode": "ck",
+            "devPlayId": "myDevPlayId",
+            "coupons": [
+                "WELCOMETOKINGDOM",
+                "KINGDOMWELOVEYOU",
+                "KINGDOMSUNBA0128",
+                "KINGDOMYANGDDING",
+                "KINGDOMSWAMP0130",
+                "TK2PO5GA87DBJALQ",
+                "KINGDOMLILKA2021",
+                "KINGDOMOKING5927"
+            ]
+        },
+        {
+            "gameCode": "crpuz",
+            "devPlayId": "myDevPlayId",
+            "coupons": [
+                "TCT2YTW5PY243P7Y"
+            ]
+        }
     ]
 }

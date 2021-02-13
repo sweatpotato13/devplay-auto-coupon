@@ -1,17 +1,28 @@
 import fetch from "node-fetch";
 import color from "colorts";
 import fs from "fs";
-import { couponList } from "./interfaces";
+import { IcouponList } from "./interfaces";
 
 export async function apply(args: string[]) {
-    if (args.length == 4) {
-        const result = await request(args[2], args[3]);
+    if (args.length == 5) {
+        const gameCode = args[2];
+        const devPlayId = args[3];
+        const coupon = args[4];
+        const result = await request(gameCode, devPlayId, coupon);
         getResult(result.code);
     } else if (args.length == 3) {
-        const obj: couponList = JSON.parse(fs.readFileSync(args[2], "utf8"));
-        for (let i = 0; i < obj.coupons.length; i++) {
-            const result = await request(obj.devPlayId, obj.coupons[i]);
-            getResult(result.code);
+        const obj: IcouponList = JSON.parse(fs.readFileSync(args[2], "utf8"));
+        for (let i = 0; i < obj.data.length; i++) {
+            const gameCode = obj.data[i].gameCode;
+            const devPlayId = obj.data[i].devPlayId;
+            for (let j = 0; j < obj.data[i].coupons.length; j++) {
+                const result = await request(
+                    gameCode,
+                    devPlayId,
+                    obj.data[i].coupons[j]
+                );
+                getResult(result.code);
+            }
         }
     } else {
         console.log("Wrong arguments");
@@ -19,8 +30,8 @@ export async function apply(args: string[]) {
     }
 }
 
-function request(devPlayId: string, couponCode: string) {
-    return fetch("https://account.devplay.com/v2/coupon/ck", {
+function request(gameCode: string, devPlayId: string, couponCode: string) {
+    return fetch(`https://account.devplay.com/v2/coupon/${gameCode}`, {
         method: "POST",
         body: JSON.stringify({
             email: devPlayId,

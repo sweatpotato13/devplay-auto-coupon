@@ -8,6 +8,10 @@ Module that apply devPlay coupon through CLI
 
 ![ss2](https://i.imgur.com/ejJWuIV.png)
 
+## Supported Games
+* 쿠키런킹덤 (ck)
+* 쿠키런퍼즐월드 (crpuz)
+* 파티파티데코플레이 (pty)
 
 ## 💾 Installation
 ```sh
@@ -29,23 +33,35 @@ devplay [arg...]
 devplay [devPlayId] [coupon] # Apply [coupon] in [devPlayId]
 devplay [json] # Apply coupons with json
 ```
+
 **Json format looks like below**
 ```json
 {
-    "devPlayId": "myDevPlayId",
-    "coupons": [
-        "WELCOMETOKINGDOM",
-        "KINGDOMWELOVEYOU",
-        "KINGDOMSUNBA0128",
-        "KINGDOMYANGDDING",
-        "KINGDOMSWAMP0130",
-        "TK2PO5GA87DBJALQ",
-        "KINGDOMLILKA2021",
-        "KINGDOMOKING5927"
+    "data":[
+        {
+            "gameCode": "ck",
+            "devPlayId": "myDevPlayId",
+            "coupons": [
+                "WELCOMETOKINGDOM",
+                "KINGDOMWELOVEYOU",
+                "KINGDOMSUNBA0128",
+                "KINGDOMYANGDDING",
+                "KINGDOMSWAMP0130",
+                "TK2PO5GA87DBJALQ",
+                "KINGDOMLILKA2021",
+                "KINGDOMOKING5927"
+            ]
+        },
+        {
+            "gameCode": "crpuz",
+            "devPlayId": "myDevPlayId",
+            "coupons": [
+                "TCT2YTW5PY243P7Y"
+            ]
+        }
     ]
 }
 ```
-coupons can be array, devPlayId will be single string
 
 ## ☎️ Need help ?
 Post on [Issue](https://github.com/sweatpotato13/devPlayAutoCoupon/issues)
