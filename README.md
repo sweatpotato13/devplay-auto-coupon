@@ -30,7 +30,7 @@ devplay [arg...]
 
 ## 💾 Usage
 ```sh
-devplay [devPlayId] [coupon] # Apply [coupon] in [devPlayId]
+devplay [gameCode] [devPlayId] [coupon] # Apply [coupon] in [devPlayId]
 devplay [json] # Apply coupons with json
 ```
 
