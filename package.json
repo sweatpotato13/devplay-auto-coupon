@@ -40,7 +40,7 @@
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts",
     "create": "yarn build && yarn test",
     "build": "tsc -p .",
-    "test": "sudo npm i -g && devplay",
+    "test": "jest",
     "refresh": "rm -rf ./node_modules ./package-lock.json && yarn",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
     "prettier": "prettier --write --config .prettierrc ./src///*.ts && prettier --write --config .prettierrc ./test///*.ts"
