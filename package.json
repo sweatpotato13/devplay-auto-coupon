@@ -54,7 +54,7 @@
     "colorts": "^0.1.63",
     "commander": "^7.0.0",
     "figlet": "^1.5.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "tslib": "^2.1.0"
